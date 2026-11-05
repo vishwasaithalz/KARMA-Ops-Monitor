@@ -63,3 +63,8 @@ A future home for **verified** GitHub CI and Vercel deployment health reports, p
 <details><summary><strong>Visual gallery and interactive KARMA homepage</strong></summary>
 <p><a href="https://karma-ops-monitor.vercel.app">Open the interactive project gallery with original user-controlled sound</a>.</p>
 </details>
+
+
+<!-- KARMA AVATAR GALLERY -->
+<p align="center"><img src="assets/karma-avatar.svg" width="112" alt="Original illustrated KARMA Ops avatar" /></p>
+<p align="center"><a href="https://karma-ops-monitor.vercel.app/#gallery">Explore the animated project gallery</a></p>
