@@ -1,0 +1,42 @@
+name: Generate KARMA original motion GIF
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate-karma-motion.py'
+      - '.github/workflows/karma-motion.yml'
+permissions:
+  contents: write
+concurrency:
+  group: karma-motion
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow
+        run: python -m pip install 'Pillow==11.3.0'
+      - name: Render original animated media
+        env:
+          KARMA_PROJECT: 'KARMA-Ops-Monitor'
+          KARMA_ACCENT: '#7fe7d6'
+          KARMA_SECONDARY: '#4e83ae'
+          KARMA_INDEX: '10'
+        run: python scripts/generate-karma-motion.py
+      - name: Commit generated asset when changed
+        run: |
+          git add assets/karma-motion.gif
+          if git diff --cached --quiet; then
+            echo "Media already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "media: render unique KARMA animated GIF"
+          git push
