@@ -57,3 +57,9 @@ A future home for **verified** GitHub CI and Vercel deployment health reports, p
 ---
 
 <div align="center"><sub>Built for evidence, not vanity metrics. · KARMA SYSTEMS</sub></div>
+
+
+<p align="center"><img src="assets/karma-signal.svg" width="100%" alt="Animated KARMA-Ops-Monitor signal" /></p>
+<details><summary><strong>Visual gallery and interactive KARMA homepage</strong></summary>
+<p><a href="https://karma-ops-monitor.vercel.app">Open the interactive project gallery with original user-controlled sound</a>.</p>
+</details>
