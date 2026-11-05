@@ -1,0 +1,57 @@
+<div align="center">
+
+# ◈ KARMA / OPS MONITOR
+
+**The signal tower for a growing developer ecosystem.**
+
+[![GitHub Actions](https://img.shields.io/badge/CI-Review--first-242938?style=for-the-badge&logo=githubactions)](../../actions)
+![Mode](https://img.shields.io/badge/MODE-READ%20ONLY-0f766e?style=for-the-badge)
+![Policy](https://img.shields.io/badge/POLICY-NO%20SECRETS-334155?style=for-the-badge)
+
+`OBSERVE  /  VERIFY  /  DOCUMENT  /  IMPROVE`
+
+</div>
+
+---
+
+## Mission control
+
+A future home for **verified** GitHub CI and Vercel deployment health reports, public SEO checks and release-readiness notes. This repository is a **starter**, not a running monitoring service. No scheduled jobs or integrations are enabled yet.
+
+| Signal | What will be checked | Status |
+|:--|:--|:--|
+| 🛰️ Deployments | Linked production deployment state | Planned |
+| 🧪 CI | Workflow failures and regression tests | Planned |
+| 🔎 SEO | Public metadata, robots and sitemaps | Planned |
+| 🔐 Privacy | No credentials or private site content in reports | Policy |
+| 📓 Journal | Verified changes with timestamps | Planned |
+
+## Interface direction
+
+- **Graphite and teal** visual system, restrained highlights and clean typography.
+- **Animated SVG** status indicators only when backed by real data.
+- **Accessible dark/light** layouts, responsive dashboards and reduced-motion support.
+- **Interactive filters** for projects, severity and environment in a future deployed UI.
+- **No fake uptime, passing badges, charts or deployment claims.**
+
+## Safe operating rules
+
+1. Read-only checks first; do not change DNS, secrets, billing or visibility.
+2. Only monitor explicitly approved projects and public endpoints.
+3. Keep private deployment authentication intact.
+4. Test reversible changes before merging or deploying.
+5. Record exact source SHA, timestamp and verification evidence.
+6. Never report a site as healthy solely because a deployment is marked READY.
+
+## Roadmap
+
+- [x] Establish repository design and operating policy
+- [ ] Add typed project inventory with explicit allowlists
+- [ ] Implement tested, read-only CI and deployment adapters
+- [ ] Create accessible dashboard with verified source data
+- [ ] Add optional manual workflow and failure isolation
+- [ ] Integrate with KARMA Control Center after canonical source verification
+
+---
+
+<div align="center"><sub>Built for evidence, not vanity metrics. · KARMA SYSTEMS</sub></div>
