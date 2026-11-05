@@ -1,5 +1,7 @@
 <div align="center">
 
+![KARMA Ops Monitor animated telemetry banner](assets/ops-banner.svg)
+
 # ◈ KARMA / OPS MONITOR
 
 **The signal tower for a growing developer ecosystem.**
