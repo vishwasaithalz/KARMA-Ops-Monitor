@@ -1,6 +1,10 @@
-<!-- KARMA PROJECT IDENTITY / original art -->
-<p align="center"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/projects/karma-ops-v2.svg" alt="KARMA Ops Monitor: portfolio operations and engineering" width="100%" /></p>
+<!-- KARMA PROJECT IDENTITY / compact visual navigation -->
+<p align="center"><a href="https://karma-ops-monitor.vercel.app"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/tiles/karma-ops.svg" width="68%" alt="Open 🛰️ KARMA Ops Monitor project" /></a></p>
 <p align="center"><strong>🛰️ KARMA Ops Monitor</strong> · Portfolio operations and engineering</p>
+<p align="center">
+<a href="https://karma-ops-monitor.vercel.app"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/nav/portfolio.svg" width="46%" alt="Visit live KARMA workshop" /></a>
+<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/#terminal"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/nav/terminal.svg" width="46%" alt="Open public terminal simulator" /></a>
+</p>
 
 <div align="center">
 
