@@ -1,3 +1,7 @@
+<!-- KARMA PROJECT IDENTITY / original art -->
+<p align="center"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/projects/karma-ops-v2.svg" alt="KARMA Ops Monitor: portfolio operations and engineering" width="100%" /></p>
+<p align="center"><strong>🛰️ KARMA Ops Monitor</strong> · Portfolio operations and engineering</p>
+
 <div align="center">
 
 ![KARMA Ops Monitor animated telemetry banner](assets/ops-banner.svg)
