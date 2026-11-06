@@ -1,0 +1,59 @@
+name: KARMA Ops read-only quality gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+      - name: Check JS and Python syntax
+        run: |
+          node --check public-status.js
+          python -m py_compile scripts/generate-public-status.py
+      - name: Validate static status snapshot and HTML without network requests
+        run: |
+          python - <<'PY'
+          import json
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class Checker(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.doctype = False
+                  self.links = 0
+              def handle_decl(self, decl):
+                  self.doctype |= decl.lower() == "doctype html"
+              def handle_starttag(self, tag, attrs):
+                  if tag == "a":
+                      self.links += 1
+          page = Path("index.html").read_text(encoding="utf-8")
+          checker = Checker()
+          checker.feed(page)
+          assert checker.doctype, "Missing HTML doctype"
+          assert checker.links >= 1, "Expected navigable links"
+          snapshot = json.loads(Path("public-status.json").read_text(encoding="utf-8"))
+          assert isinstance(snapshot.get("projects"), list), "Missing project inventory"
+          allowed = {"passed", "failed", "running", "not_verified", "unavailable"}
+          for item in snapshot["projects"]:
+              assert item.get("state") in allowed, "Unknown project state"
+              assert isinstance(item.get("repository"), str), "Missing repository identifier"
+          print(f"Static QA passed: {len(snapshot['projects'])} public project records")
+          PY
