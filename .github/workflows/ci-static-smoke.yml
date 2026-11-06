@@ -1,0 +1,29 @@
+name: KARMA public site static smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'public-status.json'
+      - 'scripts/smoke_public_site.py'
+      - '.github/workflows/ci-static-smoke.yml'
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'public-status.json'
+      - 'scripts/smoke_public_site.py'
+      - '.github/workflows/ci-static-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile scripts/smoke_public_site.py
+      - run: python scripts/smoke_public_site.py
