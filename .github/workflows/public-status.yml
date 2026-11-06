@@ -1,0 +1,78 @@
+name: KARMA public CI signal snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/generate-public-status.py
+      - .github/workflows/public-status.yml
+  pull_request:
+    paths:
+      - scripts/generate-public-status.py
+      - .github/workflows/public-status.yml
+      - public-status.json
+      - index.html
+  workflow_dispatch:
+  schedule:
+    - cron: '40 4 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Static source verification
+        run: |
+          python -m py_compile scripts/generate-public-status.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('public-status.json').read_text())
+          assert len(data['projects'])==8
+          assert all(p['state'] in ('passed','failed','running','not_verified','unavailable') for p in data['projects'])
+          assert all('token' not in str(p).lower() for p in data['projects'])
+          print('Public-only status contract is valid')
+          PY
+      - name: Refresh from public GitHub Actions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate-public-status.py
+      - name: Validate public snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("public-status.json").read_text())
+          assert len(data["projects"])==8
+          for item in data["projects"]:
+              assert item["repository"] in {"LogSentry","recon-lite","AI-Automation-Lab","CyberPlayground","YYYH","flagship-api","nextjs-boilerplate","vishwasaithalz"}
+              assert item["state"] in {"passed","failed","running","not_verified","unavailable"}
+          print("Verified public-only CI data snapshot")
+          PY
+      - name: Commit source-derived snapshot on main
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh public GitHub CI status snapshot"
+            for attempt in 1 2 3 4; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              sleep 3
+            done
+            exit 1
+          fi
