@@ -26,12 +26,12 @@
 
 ## Mission control
 
-A future home for **verified** GitHub CI and Vercel deployment health reports, public SEO checks and release-readiness notes. This repository is a **starter**, not a running monitoring service. No scheduled jobs or integrations are enabled yet.
+A starter for **verified** GitHub CI signals, planned Vercel deployment checks, public SEO checks and release-readiness notes. A scheduled GitHub Actions workflow refreshes `public-status.json` from public CI run metadata; this is **not** a production uptime monitor or proof that live application routes work.
 
 | Signal | What will be checked | Status |
 |:--|:--|:--|
 | 🛰️ Deployments | Linked production deployment state | Planned |
-| 🧪 CI | Workflow failures and regression tests | Planned |
+| 🧪 CI | Public GitHub Actions run metadata in `public-status.json` | Scheduled snapshot; not full test coverage |
 | 🔎 SEO | Public metadata, robots and sitemaps | Planned |
 | 🔐 Privacy | No credentials or private site content in reports | Policy |
 | 📓 Journal | Verified changes with timestamps | Planned |
