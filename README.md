@@ -1,11 +1,17 @@
 <!-- VISHWAS.EXE UNIFIED THEME START -->
-<p align="center"><a href="https://karma-ops-monitor.vercel.app"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/brand/vishwas-exe-ops-monitor.svg" width="100%" alt="Ops Monitor. Original editorial illustration by Vishwas Aithal." /></a></p>
-
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/">Personal index</a> &nbsp;·&nbsp; <a href="https://github.com/vishwasaithalz?tab=repositories">All projects</a> &nbsp;·&nbsp; <a href="https://vishwasaithal.ai.studio/">Portfolio</a></p>
+<p align="center"><a href="https://karma-ops-monitor.vercel.app"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/brand/vishwas-exe-ops-monitor.svg" width="100%" alt="VISHWAS.EXE uniform retro GitHub interface for Ops Monitor, created by Vishwas Aithal" /></a></p>
+<p align="center"><strong>VISHWAS.EXE / Ops Monitor</strong><br/>Public metadata, monitoring design and engineering operations<br/><sub>Designed and built by <strong>Vishwas Aithal</strong> · Same computer universe, its own personality</sub></p>
+<p align="center">
+  <a href="https://vishwasaithalz.github.io/vishwasaithalz/"><strong>💾 BOOT MANAGER</strong></a> &nbsp;·&nbsp;
+  <a href="https://vishwasaithalz.github.io/vishwasaithalz/overload/"><strong>🖥️ OVERLOAD OS</strong></a> &nbsp;·&nbsp;
+  <a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/"><strong>🎮 ARCADE</strong></a> &nbsp;·&nbsp;
+  <a href="https://github.com/vishwasaithalz?tab=repositories"><strong>📁 ALL PROJECTS</strong></a> &nbsp;·&nbsp;
+  <a href="https://vishwasaithal.ai.studio/"><strong>🌐 PORTFOLIO</strong></a>
+</p>
 <!-- VISHWAS.EXE UNIFIED THEME END -->
 
 <details>
-<summary>Earlier artwork and navigation</summary>
+<summary><strong>🎞 Open legacy project visuals and original navigation</strong></summary>
 
 <p align="center"><a href="https://karma-ops-monitor.vercel.app"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/tiles/karma-ops.svg" width="68%" alt="Open 🛰️ Vishwas Aithal Ops Monitor project" /></a></p>
 <p align="center"><strong>🛰️ Vishwas Aithal Ops Monitor</strong> · Portfolio operations and engineering</p>
