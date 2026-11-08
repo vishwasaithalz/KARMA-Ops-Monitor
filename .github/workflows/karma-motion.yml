@@ -1,4 +1,4 @@
-name: Generate KARMA original motion GIF
+name: VISHWAS.EXE Ops Motion Studio
 on:
   workflow_dispatch:
   push:
