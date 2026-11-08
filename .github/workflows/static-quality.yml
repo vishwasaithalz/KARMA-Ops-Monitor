@@ -1,4 +1,4 @@
-name: KARMA Ops read-only quality gate
+name: VISHWAS.EXE Ops Quality Gate
 
 on:
   pull_request:
