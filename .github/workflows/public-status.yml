@@ -1,4 +1,4 @@
-name: KARMA public CI signal snapshot
+name: VISHWAS.EXE Public CI Signals
 
 on:
   push:
