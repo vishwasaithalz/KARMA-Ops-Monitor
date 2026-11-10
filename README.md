@@ -99,17 +99,3 @@ A starter for **verified** GitHub CI signals, planned Vercel deployment checks, 
 ![Vishwas Aithal Ops Monitor original animated project signal](assets/karma-motion.gif)
 
 [Download this project's GIF](assets/karma-motion.gif) · [View the animated SVG](assets/karma-signal.svg)
-
-
-<!-- VISHWAS SIGNATURE SIGNAL START -->
-### 🎞 Signature animation / Ops Monitor
-
-<p align="center"><a href="https://vishwasaithalz.github.io/vishwasaithalz/"><img src="https://raw.githubusercontent.com/vishwasaithalz/vishwasaithalz/main/assets/arcade-gifs/karma-ops.gif" width="100%" alt="Original Ops Monitor read-only radar sweep animated signal. Open Vishwas Aithal's single interactive GitHub Pages portfolio." /></a></p>
-
-<p align="center"><strong>Vishwas Aithal / PSYCHKARMA / BOOTDISK 1995</strong><br/>
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/">PRESS START / ONE INTERACTIVE PORTFOLIO</a> ·
-<a href="https://vishwasaithalz.github.io/vishwasaithalz/arcade/">PLAY ARCADE</a> ·
-<a href="https://github.com/vishwasaithalz">GITHUB PROFILE</a></p>
-
-<sub>Original project-specific artwork. This is a visual identity clip, not a live system measurement.</sub>
-<!-- VISHWAS SIGNATURE SIGNAL END -->
