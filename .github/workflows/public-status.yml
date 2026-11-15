@@ -54,7 +54,7 @@ jobs:
           data=json.loads(Path("public-status.json").read_text())
           assert len(data["projects"])==8
           for item in data["projects"]:
-              assert item["repository"] in {"LogSentry","recon-lite","AI-Automation-Lab","CyberPlayground","YYYH","flagship-api","nextjs-boilerplate","vishwasaithalz"}
+              assert item["repository"] in {"LogSentry","recon-lite","AI-Automation-Lab","CyberPlayground","YYYH","flagship-api","KARMA-Ops-Monitor","vishwasaithalz"}
               assert item["state"] in {"passed","failed","running","not_verified","unavailable"}
           print("Verified public-only CI data snapshot")
           PY
