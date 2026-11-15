@@ -16,7 +16,7 @@ PROJECTS = [
     ("CyberPlayground", "CyberPlayground", "Tests"),
     ("YinYangYoHackers", "YYYH", "CI"),
     ("Flagship API", "flagship-api", "Tests"),
-    ("Next.js Starter", "nextjs-boilerplate", "CI"),
+    ("KARMA Ops Monitor", "KARMA-Ops-Monitor", "VISHWAS.EXE Public CI Signals"),
     ("GitHub Profile", "vishwasaithalz", "Profile quality"),
 ]
 OUT = Path(__file__).resolve().parents[1] / "public-status.json"
